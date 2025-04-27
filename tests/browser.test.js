@@ -14,6 +14,11 @@ beforeAll(async () => {
   await driver.get(fileUnderTest);
 });
 
+// Ladda om sidan inför varje test för att städa upp state
+beforeEach(async () => {
+  driver.get(fileUnderTest);
+});
+
 // Allra sist avslutar vi Firefox igen
 afterAll(async () => {
   await driver.quit();
@@ -46,6 +51,9 @@ test("Pop should remove the topmost item", async () => {
   await pop.click();
   const popAlert = await driver.switchTo().alert();
   popAlert.accept();
+
+  const peek = await driver.findElement(By.id("peek"));
+  await peek.click();
 
   const stack = await driver.findElement(By.id("top_of_stack")).getText();
   expect(stack).toBe("undefined");

@@ -23,5 +23,5 @@ test("pop on stack removes the latest element", () => {
   stack.push("foo");
   stack.push("bar");
   stack.pop();
-  expect(stack.peek()).toBe("bar");
+  expect(stack.peek()).toBe("foo");
 });
