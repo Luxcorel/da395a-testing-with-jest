@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# dist
 
 # Gatsby files
 .cache/
@@ -137,3 +137,6 @@ dist
 
 # macos files
 .DS_STORE
+
+# webpack output
+/dist/
