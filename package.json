@@ -21,5 +21,10 @@
   "homepage": "https://github.com/Luxcorel/da395a-testing-with-jest#readme",
   "dependencies": {
     "underscore": "^1.13.7"
+  },
+  "devDependencies": {
+    "copy-webpack": "^4.2.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
   }
 }
