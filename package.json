@@ -1,0 +1,22 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "A Jest + npm lab session",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luxcorel/da395a-testing-with-jest.git"
+  },
+  "author": "Johannes Rosengren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luxcorel/da395a-testing-with-jest/issues"
+  },
+  "homepage": "https://github.com/Luxcorel/da395a-testing-with-jest#readme"
+}
