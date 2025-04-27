@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Luxcorel/da395a-testing-with-jest#readme",
   "dependencies": {
+    "geckodriver": "^5.0.0",
+    "selenium-webdriver": "^4.31.0",
     "underscore": "^1.13.7"
   },
   "devDependencies": {
