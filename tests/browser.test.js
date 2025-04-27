@@ -33,3 +33,20 @@ describe('Clicking "Pusha till stacken"', () => {
     await alert.accept();
   });
 });
+
+// My own test
+test("Pop should remove the topmost item", async () => {
+  const push = await driver.findElement(By.id("push"));
+  await push.click();
+  const pushAlert = await driver.switchTo().alert();
+  await pushAlert.sendKeys("foobar");
+  await pushAlert.accept();
+
+  const pop = await driver.findElement(By.id("pop"));
+  await pop.click();
+  const popAlert = await driver.switchTo().alert();
+  popAlert.accept();
+
+  const stack = await driver.findElement(By.id("top_of_stack")).getText();
+  expect(stack).toBe("undefined");
+});
