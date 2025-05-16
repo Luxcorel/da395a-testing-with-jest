@@ -40,21 +40,18 @@ describe('Clicking "Pusha till stacken"', () => {
 });
 
 // My own test
-test("Pop should remove the topmost item", async () => {
+test('Clicking "Poppa stacken!" should display the removed item', async () => {
   const push = await driver.findElement(By.id("push"));
   await push.click();
-  const pushAlert = await driver.switchTo().alert();
-  await pushAlert.sendKeys("foobar");
-  await pushAlert.accept();
+  const pushPrompt = await driver.switchTo().alert();
+  await pushPrompt.sendKeys("foobar");
+  await pushPrompt.accept();
 
   const pop = await driver.findElement(By.id("pop"));
   await pop.click();
   const popAlert = await driver.switchTo().alert();
-  popAlert.accept();
+  const popText = await popAlert.getText();
+  await popAlert.accept();
 
-  const peek = await driver.findElement(By.id("peek"));
-  await peek.click();
-
-  const stack = await driver.findElement(By.id("top_of_stack")).getText();
-  expect(stack).toBe("undefined");
+  expect(popText).toBe("Tog bort foobar");
 });
